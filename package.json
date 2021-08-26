@@ -4,12 +4,12 @@
   "description": "A dynamic form",
   "main": "main.js",
   "scripts": {
-    "start": "Electron ."
+    "start": "electron ."
   },
   "keywords": [],
   "author": "Filipe Margraf - filipemargraf1@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "electron": "^13.2.1"
+    "electron": "^13.2.2"
   }
 }
