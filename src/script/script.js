@@ -9,6 +9,8 @@ function passCheck() {
     else {
         document.getElementById('passwordInput').style.border = "2px solid #E30000";
         document.getElementById('confirmPasswordInput').style.border = "2px solid #E30000";
+        document.getElementById('message').innerHTML = `<strong>Senhas diferentes</strong>`
+        document.getElementById('message').style.color = "#E30000";
     }
 }
 
