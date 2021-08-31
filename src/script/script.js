@@ -2,9 +2,11 @@ function passCheck() {
     var passInp = document.getElementById('passwordInput').value;
     var confirmPassInp = document.getElementById('confirmPasswordInput').value;
 
+    //Verifica se as senhas são iguais
     if (passInp === confirmPassInp) {
         document.getElementById('passwordInput').style.border = "2px solid #1BE300";
         document.getElementById('confirmPasswordInput').style.border = "2px solid #1BE300";
+        document.getElementById('message').innerHTML = ``;
     }
     else {
         document.getElementById('passwordInput').style.border = "2px solid #E30000";
