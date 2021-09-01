@@ -1,4 +1,9 @@
-p#message {
+p#messagePass {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+p#messageMail {
     margin-top: 2px;
     margin-bottom: 2px;
 }
