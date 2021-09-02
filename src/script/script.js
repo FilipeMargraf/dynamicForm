@@ -6,7 +6,7 @@ function passCheck() {
     if (passInp === confirmPassInp) {
         document.getElementById('passwordInput').style.border = "2px solid #1BE300";
         document.getElementById('confirmPasswordInput').style.border = "2px solid #1BE300";
-        document.getElementById('message').innerHTML = ``;
+        document.getElementById('messagePass').innerHTML = ``;
     }
     else {
         document.getElementById('passwordInput').style.border = "2px solid #E30000";
@@ -28,9 +28,25 @@ function emailCheck() {
     }
     else { 
       document.getElementById('emailInput').style.border = "2px solid #E30000";
-      document.getElementById('messageMail').innerHTML = `<strong>Email não válido</strong>`
+      document.getElementById('messageMail').innerHTML = `<strong>Email não válido</strong>`;
       document.getElementById('messageMail').style.color = "#E30000";
     }
 }
 
 document.getElementById('buttonCheck').addEventListener('click', emailCheck);
+
+function usernameCheck() {
+  var username = document.getElementById('usernameInput').value;
+
+  if (username === '') {
+    document.getElementById('usernameInput').style.border = "2px solid #E30000";
+    document.getElementById('messageUser').innerHTML = `<strong>Insira um nome</strong>`;
+    document.getElementById('messageUser').style.color = "#E30000";
+  }
+  else {
+    document.getElementById('usernameInput').style.border = "2px solid #1BE300";
+    document.getElementById('messageUser').innerHTML = ``;
+  }
+}
+
+document.getElementById('buttonCheck').addEventListener('click', usernameCheck);
