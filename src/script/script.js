@@ -57,3 +57,21 @@ function usernameCheck() {
 }
 
 document.getElementById('buttonCheck').addEventListener('click', usernameCheck);
+
+function showPass() {
+  var pass1 = document.getElementById('passwordInput');
+  var pass2 = document.getElementById('confirmPasswordInput');
+
+  if (pass1.type == 'password' && pass2.type == 'password') {
+    pass1.type = 'text';
+    pass2.type = 'text';
+    document.getElementById('seePass').value = 'Esconder';
+  }
+  else {
+    pass1.type = 'password';
+    pass2.type = 'password';
+    document.getElementById('seePass').value = 'Mostrar'; 
+  }
+}
+
+document.getElementById('seePass').addEventListener('click', showPass);
