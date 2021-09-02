@@ -2,17 +2,24 @@ function passCheck() {
   var passInp = document.getElementById('passwordInput').value;
   var confirmPassInp = document.getElementById('confirmPasswordInput').value;
 
+  if (document.getElementById('passwordInput').value.length < 6) {
+    document.getElementById('passwordInput').style.border = "2px solid #E30000";
+    document.getElementById('shortPass').innerHTML = `<strong>Defina no mínimo 6 caracteres</strong>`;
+    document.getElementById('shortPass').style.color = "#E30000";
+  }
   //Verifica se as senhas são iguais
-  if (passInp === confirmPassInp) {
+  else if (passInp === confirmPassInp) {
     document.getElementById('passwordInput').style.border = "2px solid #1BE300";
     document.getElementById('confirmPasswordInput').style.border = "2px solid #1BE300";
     document.getElementById('messagePass').innerHTML = ``;
+    document.getElementById('shortPass').innerHTML = ``;
   }
   else {
-    document.getElementById('passwordInput').style.border = "2px solid #E30000";
+    document.getElementById('passwordInput').style.border = "2px solid #1BE300";
     document.getElementById('confirmPasswordInput').style.border = "2px solid #E30000";
     document.getElementById('messagePass').innerHTML = `<strong>Senhas diferentes</strong>`;
     document.getElementById('messagePass').style.color = "#E30000";
+    document.getElementById('shortPass').innerHTML = ``;
   }
 }
 
