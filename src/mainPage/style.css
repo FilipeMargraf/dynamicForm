@@ -1,19 +1,4 @@
-p#messagePass {
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
-
-p#messageMail {
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
-
-p#messageUser {
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
-
-p#shortPass {
+p#messagePass, #messageMail, #messageUser, #shortPass {
     margin-top: 2px;
     margin-bottom: 2px;
 }
